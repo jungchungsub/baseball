@@ -1,4 +1,4 @@
-package site.metacoding.red.web.dto.request;
+package site.metacoding.red.web.dto.request.stadium;
 
 import lombok.Getter;
 import lombok.Setter;

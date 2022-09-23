@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import site.metacoding.red.web.dto.request.UpdateStadiumDto;
+import site.metacoding.red.web.dto.request.stadium.UpdateStadiumDto;
 
 @Getter
 @Setter

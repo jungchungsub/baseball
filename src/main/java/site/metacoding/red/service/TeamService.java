@@ -7,6 +7,8 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.team.Team;
 import site.metacoding.red.domain.team.TeamDao;
+import site.metacoding.red.web.dto.request.stadium.InsertStadiumDto;
+import site.metacoding.red.web.dto.request.team.InsertTeamDto;
 
 @RequiredArgsConstructor
 @Service
@@ -18,6 +20,10 @@ public class TeamService {
 		List<Team> team = teamdao.findAll();
 		return team;
 	};
+	
+	public void 팀추가하기(InsertTeamDto insertTeamDto) {
+		teamdao.insert(insertTeamDto.toEntity());
+	}
 	
 	//public void insert(Team team);
 	

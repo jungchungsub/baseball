@@ -7,8 +7,8 @@ import org.springframework.stereotype.Service;
 import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.stadium.Stadium;
 import site.metacoding.red.domain.stadium.StadiumDao;
-import site.metacoding.red.web.dto.request.InsertStadiumDto;
-import site.metacoding.red.web.dto.request.UpdateStadiumDto;
+import site.metacoding.red.web.dto.request.stadium.InsertStadiumDto;
+import site.metacoding.red.web.dto.request.stadium.UpdateStadiumDto;
 
 @RequiredArgsConstructor
 @Service

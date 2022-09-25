@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="site.metacoding.red.domain.team.TeamDao">
+
+	<select id="findAll"
+		resultType="site.metacoding.red.web.dto.request.team.TeamListDto">
+		SELECT t.id, s.name stadiumName, t.name,
+		t.createdAt
+		FROM team t INNER JOIN stadium s
+		ON t.stadiumId = s.id;
+	</select>
+	
+	<insert id="insert">
+		INSERT INTO team(stadiumId,name,createdAt)
+		VALUES(#{stadiumId},#{name},now())
+	</insert>
+
+	<select id="findById"
+		resultType="site.metacoding.red.domain.team.Team">
+		SELECT t.id, s.name "stadiumName", t.name "teamName",
+		t.createdAt
+		FROM team
+		t INNER JOIN stadium s
+		ON t.stadiumId = s.id
+		WHERE
+		t.id = #{id} AND
+		t.name = #{name}
+	</select>
+
+	<delete id="delete">
+		DELETE FROM team WHERE id=#{id}
+	</delete>
+
+	<update id="update">
+		UPDATE team SET name = #{name} , stadiumId
+		=#{stadiumId}
+		WHERE id = #{id}
+	</update>
+
+
+
+
+</mapper>

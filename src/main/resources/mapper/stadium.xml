@@ -16,7 +16,7 @@
  		SELECT * FROM stadium WHERE id=#{id}
  	</select>
  	
- 	<delete id="delete">
+ 	<delete id="deleteById">
  		DELETE FROM stadium WHERE id=#{id}
  	</delete>
  

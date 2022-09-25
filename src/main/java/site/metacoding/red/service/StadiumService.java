@@ -8,7 +8,6 @@ import lombok.RequiredArgsConstructor;
 import site.metacoding.red.domain.stadium.Stadium;
 import site.metacoding.red.domain.stadium.StadiumDao;
 import site.metacoding.red.web.dto.request.stadium.InsertStadiumDto;
-import site.metacoding.red.web.dto.request.stadium.UpdateStadiumDto;
 
 @RequiredArgsConstructor
 @Service
@@ -36,17 +35,5 @@ public class StadiumService {
 		return stadiumdao.findById(id);
 	}	
 	
-	public void 구장수정(Integer id, UpdateStadiumDto updateStadiumDto) {
-		//영속화
-		Stadium stadium = stadiumdao.findById(id);
-		
-		//필요한 부분 업데이트
-		stadium.update(updateStadiumDto);
-		
-		//전체 업데이트
-		stadiumdao.update(stadium);
-	}
-	
-
 	
 }

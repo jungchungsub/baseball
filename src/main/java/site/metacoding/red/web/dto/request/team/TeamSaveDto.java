@@ -1,14 +1,15 @@
 package site.metacoding.red.web.dto.request.team;
 
+import java.sql.Timestamp;
+
 import lombok.Getter;
 import lombok.Setter;
-import site.metacoding.red.domain.team.Team;
 
 @Getter
 @Setter
-public class InsertTeamDto {
+public class TeamSaveDto {
+	private Integer id;
 	private Integer stadiumId;
-	private String name;
-
-	
+	private Integer name;
+	private Timestamp createdAt;
 }

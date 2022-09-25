@@ -5,7 +5,7 @@ import java.sql.Timestamp;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import site.metacoding.red.web.dto.request.stadium.UpdateStadiumDto;
+
 
 @Getter
 @Setter
@@ -21,7 +21,5 @@ public class Stadium {
 		this.area = area;
 	}
 	
-	public void update(UpdateStadiumDto updateStadiumDto) {
-		this.name = updateStadiumDto.getName();
-	}
+
 }

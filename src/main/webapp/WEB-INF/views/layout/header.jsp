@@ -26,13 +26,17 @@
 			<div class="collapse navbar-collapse" id="collapsibleNavbar">
 				<ul class="navbar-nav">
 					<li class="nav-item"><a class="nav-link" href="/stadiumList">야구장
-							목록 보기</a></li>
+							목록보기</a></li>
 					<li class="nav-item"><a class="nav-link"
 						href="/stadiumSaveForm">야구장 등록</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/stadiumSaveForm">팀 목록보기</a></li>
+						href="/teamList">팀 목록보기</a></li>
 					<li class="nav-item"><a class="nav-link"
-						href="/stadiumSaveForm">팀 등록</a></li>
+						href="/teamSaveForm">팀 등록</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/stadiumSaveForm">선수 목록보기</a></li>
+					<li class="nav-item"><a class="nav-link"
+						href="/stadiumSaveForm">선수 등록</a></li>
 				</ul>
 			</div>
 		</div>

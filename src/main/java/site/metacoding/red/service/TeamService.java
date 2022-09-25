@@ -9,6 +9,8 @@ import site.metacoding.red.domain.team.Team;
 import site.metacoding.red.domain.team.TeamDao;
 import site.metacoding.red.web.dto.request.stadium.InsertStadiumDto;
 import site.metacoding.red.web.dto.request.team.InsertTeamDto;
+import site.metacoding.red.web.dto.request.team.TeamListDto;
+import site.metacoding.red.web.dto.request.team.TeamSaveDto;
 
 @RequiredArgsConstructor
 @Service
@@ -16,18 +18,12 @@ public class TeamService {
 	private final TeamDao teamdao;
 	
 	
-	public List<Team> 팀전체보기(){
-		List<Team> team = teamdao.findAll();
-		return team;
+	public List<TeamListDto> 팀전체보기(){
+		List<TeamListDto> teamList = teamdao.findAll();
+		return teamList;
 	};
 	
-	public void 팀추가하기(InsertTeamDto insertTeamDto) {
-		teamdao.insert(insertTeamDto.toEntity());
-	}
-	
-	//public void insert(Team team);
-	
-	
+
 	public Team 팀하나찾기(Integer id) {
 		return teamdao.findById(id);
 	};
@@ -35,4 +31,10 @@ public class TeamService {
 	public void 팀삭제하기(Integer id) {
 		teamdao.deleteById(id);
 	};
+	
+	public void 팀추가하기(TeamSaveDto teamSaveDto) {
+		teamdao.insert(teamSaveDto);
+	}
+	
+	
 }

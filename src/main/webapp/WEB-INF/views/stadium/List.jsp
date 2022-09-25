@@ -11,9 +11,8 @@
 				<tr>
 					<th>번호</th>
 					<th>이름</th>
-					<th>개장일</th>
 					<th>지역</th>
-					<th>수정</th>
+					<th>개장일</th>
 					<th>삭제</th>
 				</tr>
 			</thead>
@@ -24,17 +23,31 @@
 						<td>${stadium.name}</td>
 						<td>${stadium.area}</td>
 						<td>${stadium.createdAt}</td>
-						<td>-</td>
-						<td>-</td>
+						<td><button id="DeleteStadium" type="button"
+								class="btn btn-danger">삭제</button></td>
 					</tr>
 				</c:forEach>
 			</tbody>
 		</table>
 	</div>
+	<script>
+	$("#DeleteStadium").click(()=>{		
+		let id = $("#id").val();
+		
+		$.ajax("/stadium/delete",{
+			type: "DELETE",
+			dataType: "json" // 응답 데이터
+		}).done((res)=>{
+			if(res.code == 1){
+				alert("구장삭제 완료");
+				location.href = "/";
+			}else{
+				alert("구장삭제 실패"); 
+			}
+		});
+	});
+</script>
 
 
-</div>
 
-
-
-<%@ include file="../layout/footer.jsp"%>
+	<%@ include file="../layout/footer.jsp"%>

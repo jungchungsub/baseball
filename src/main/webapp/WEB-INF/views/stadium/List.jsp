@@ -30,6 +30,7 @@
 			</tbody>
 		</table>
 	</div>
+	
 	<script>
 	$("#DeleteStadium").click(()=>{		
 		let id = $("#id").val();

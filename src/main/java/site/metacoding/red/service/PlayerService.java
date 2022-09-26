@@ -27,5 +27,7 @@ public class PlayerService {
 		return playerdao.findById(id);
 	}
 	
-
+	public void 선수추가하기(Player player) {
+		
+	}
 }
